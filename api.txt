@@ -1,0 +1,189 @@
+Auth Endpoints
+Register
+Endpoint: POST /api/auth/register
+Payload:
+json
+Copy code
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "password": "password123"
+}
+Login
+Endpoint: POST /api/auth/login
+Payload:
+json
+Copy code
+{
+  "email": "johndoe@example.com",
+  "password": "password123"
+}
+
+
+Template 1 Endpoints
+Create Template 1
+Endpoint: POST /api/template1
+Payload:
+json
+Copy code
+{
+  "hero": {
+    "head": "Welcome",
+    "roles": ["Developer", "Designer"],
+    "buttonText": "Learn More",
+    "buttonLink": "/about"
+  },
+  "about": {
+    "aboutHead": "About Me",
+    "aboutDesc": "This is about me.",
+    "skills": [
+      { "skill": "JavaScript", "level": 80 },
+      { "skill": "CSS", "level": 70 }
+    ]
+  },
+  "services": {
+    "serviceHead": "My Services",
+    "services": [
+      { "title": "Web Development", "desc": "Building websites." },
+      { "title": "Design", "desc": "Creating designs." }
+    ]
+  },
+  "portfolio": {
+    "portfolioHead": "My Portfolio",
+    "projects": [
+      { "img": "image1.jpg", "projectName": "Project One", "projectLink": "/project1" },
+      { "img": "image2.jpg", "projectName": "Project Two", "projectLink": "/project2" }
+    ]
+  },
+  "experience": [
+    { "role": "Developer", "company": "Company A", "desc": "Worked on projects.", "startYear": 2015, "endYear": 2018 },
+    { "role": "Designer", "company": "Company B", "desc": "Designed websites.", "startYear": 2018, "endYear": 2020 }
+  ],
+  "education": [
+    { "course": "Computer Science", "institute": "University X", "desc": "Studied CS.", "startYear": 2010, "endYear": 2014 },
+    { "course": "Design", "institute": "University Y", "desc": "Studied Design.", "startYear": 2014, "endYear": 2016 }
+  ],
+  "blogs": { "blogHead": "My Blog" }
+}
+Get Template 1
+Endpoint: GET /api/template1/:id
+Update Template 1
+Endpoint: PUT /api/template1/:id
+Payload: (Same as Create Template 1)
+Delete Template 1
+Endpoint: DELETE /api/template1/:id
+
+
+Template 2 Endpoints
+Create Template 2
+Endpoint: POST /api/template2
+Payload:
+json
+Copy code
+{
+  "hero": {
+    "head": "Welcome",
+    "roles": ["Developer", "Designer"],
+    "buttonText": "Learn More",
+    "buttonLink": "/about",
+    "heroImg": "hero.jpg"
+  },
+  "about": {
+    "aboutHead": "About Me",
+    "aboutDesc": "This is about me.",
+    "aboutButtonText": "Read More",
+    "aboutButtonLink": "/more",
+    "aboutImg": "about.jpg"
+  },
+  "experience": [
+    { "company": "Company A", "startYear": 2015, "endYear": 2018, "role": "Developer", "desc": "Worked on projects." },
+    { "company": "Company B", "startYear": 2018, "endYear": 2020, "role": "Designer", "desc": "Designed websites." }
+  ],
+  "projects": [
+    { "projectName": "Project One", "projectDesc": "Description for project one.", "projectLink": "/project1" },
+    { "projectName": "Project Two", "projectDesc": "Description for project two.", "projectLink": "/project2" }
+  ]
+}
+
+
+Get Template 2
+Endpoint: GET /api/template2/:id
+Update Template 2
+Endpoint: PUT /api/template2/:id
+Payload: (Same as Create Template 2)
+Delete Template 2
+Endpoint: DELETE /api/template2/:id
+Settings Endpoints
+Update Settings
+Endpoint: PUT /api/settings
+Payload:
+json
+Copy code
+{
+  "logo": "logo.jpg",
+  "favicon": "favicon.ico",
+  "metaDescription": "This is a meta description.",
+  "metaKeyword": "keyword1, keyword2",
+  "title": "Page Title",
+  "ogTitle": "OG Title",
+  "ogType": "website",
+  "ogImage": "ogimage.jpg",
+  "ogUrl": "http://example.com"
+}
+Get Settings
+Endpoint: GET /api/settings
+Footer Endpoints
+Update Footer
+Endpoint: PUT /api/footer
+Payload:
+json
+Copy code
+{
+  "linkedin": "https://linkedin.com/in/username",
+  "twitter": "https://twitter.com/username",
+  "mail": "mailto:user@example.com",
+  "instagram": "https://instagram.com/username",
+  "facebook": "https://facebook.com/username"
+}
+Get Footer
+Endpoint: GET /api/footer
+Profile Endpoints
+Change Password
+Endpoint: PUT /api/profile/password
+Payload:
+json
+Copy code
+{
+  "oldPassword": "oldpassword123",
+  "newPassword": "newpassword123"
+}
+Change Name
+Endpoint: PUT /api/profile/name
+Payload:
+json
+Copy code
+{
+  "name": "New Name"
+}
+Blog Endpoints
+Create Blog
+Endpoint: POST /api/blogs
+Payload:
+json
+Copy code
+{
+  "title": "Blog Title",
+  "image": "blogimage.jpg",
+  "richtext": "<p>Blog content</p>",
+  "description": "Short description of the blog",
+  "date": "2024-08-02T00:00:00Z"
+}
+Get All Blogs
+Endpoint: GET /api/blogs
+Get Single Blog
+Endpoint: GET /api/blogs/:id
+Update Blog
+Endpoint: PUT /api/blogs/:id
+Payload: (Same as Create Blog)
+Delete Blog
+Endpoint: DELETE /api/blogs/:id
